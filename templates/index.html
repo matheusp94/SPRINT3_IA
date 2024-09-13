@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Endpoints</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        pre {
+            background-color: #e8e8e8;
+            border-left: 5px solid #4CAF50;
+            padding: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>API Endpoints</h1>
+
+        <!-- Endpoint /predict -->
+        <h2>/predict</h2>
+        <p><strong>Método:</strong> POST</p>
+        <p><strong>Exemplo de JSON de requisição:</strong></p>
+        <pre>
+{
+  "Número de Leitos": 100,
+  "Avaliação de Qualidade": 4.5,
+  "Taxas de Mortalidade": 0.02,
+  "Taxas de Readmissão": 0.1,
+  "Tempo de Espera": 30,
+  "Recursos e Equipamentos": 5,
+  "Número de Médicos": 50,
+  "Número de Enfermeiros": 100,
+  "Distância até o Centro da Cidade": 10,
+  "Taxa de Ocupação dos Leitos": 0.8,
+  "Índice de Recursos Médicos": 4.5,
+  "Diversidade de Especialidades Médicas": 3,
+  "Densidade Populacional": 10000,
+  "Especialidades Médicas_Cardiologia": 1,
+  "Especialidades Médicas_Neurologia": 0,
+  "Especialidades Médicas_Oncologia": 1,
+  "Especialidades Médicas_Ortopedia": 1,
+  "Especialidades Médicas_Pediatria": 1
+}
+        </pre>
+
+        <!-- Endpoint /health -->
+        <h2>/health</h2>
+        <p><strong>Método:</strong> GET</p>
+        <p><strong>Exemplo de Resposta:</strong></p>
+        <pre>
+{
+  "status": "API is running"
+}
+        </pre>
+
+        <div class="footer">
+            <p>API Documentation - © 2024</p>
+        </div>
+    </div>
+</body>
+
+</html>
