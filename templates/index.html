@@ -57,12 +57,56 @@
             font-size: 14px;
             color: #777;
         }
+
+        .instructions {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .instructions h2 {
+            color: #00796b;
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .instructions p {
+            color: #004d40;
+        }
+
+        .instructions pre {
+            background-color: #b2ebf2;
+            border-left: 5px solid #00796b;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1>API Endpoints</h1>
+
+        <!-- Instruções de uso da API -->
+        <div class="instructions">
+            <h2>Como Utilizar a API</h2>
+            <p>Esta API possui dois endpoints principais:</p>
+            <ul>
+                <li><strong>/predict</strong> - Envia uma requisição <strong>POST</strong> com um JSON contendo
+                    informações hospitalares, e a API retornará a previsão do melhor hospital.</li>
+                <li><strong>/health</strong> - Envia uma requisição <strong>GET</strong> para verificar se a API está
+                    funcionando corretamente.</li>
+            </ul>
+            <p><strong>Exemplo de requisição com `curl` para o endpoint /predict:</strong></p>
+            <pre>
+curl -X POST http://localhost:5000/predict -H "Content-Type: application/json" -d @data.json
+            </pre>
+            <p><strong>Exemplo de requisição com `curl` para o endpoint /health:</strong></p>
+            <pre>
+curl http://localhost:5000/health
+            </pre>
+            <p>Você pode utilizar ferramentas como Postman ou cURL para testar os endpoints da API localmente ou em
+                produção.</p>
+        </div>
 
         <!-- Endpoint /predict -->
         <h2>/predict</h2>
